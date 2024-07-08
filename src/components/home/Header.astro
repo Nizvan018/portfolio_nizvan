@@ -1,0 +1,60 @@
+---
+import GitHubIcon from "@components/icons/GitHubIcon.astro";
+import EmailIcon from "@components/icons/EmailIcon.astro";
+import InstagramIcon from "@components/icons/InstagramIcon.astro";
+import ChevronsDownIcon from "@components/icons/ChevronsDownIcon.astro";
+---
+
+<header class="flex flex-col">
+    <!-- HEADER -->
+    <div class="flex flex-col justify-center items-center gap-16 h-full">
+        <!-- TITLE -->
+        <div class="flex flex-col items-center gap-4">
+            <span class="text-lg text-white/80">Desarrollador Web</span>
+            <h1 class="text-9xl font-bold">Fullstack</h1>
+        </div>
+
+        <!-- MY INFO -->
+        <div class="flex flex-col items-center gap-2">
+            <h2 class="text-xl font-semibold">Nizvan Monteón Ricárdez</h2>
+            <span class="font-extralight text-white/80"
+                >Desarrollando con amor las páginas web son más bonitas y
+                funcionales</span
+            >
+
+            <!-- BUTTONS -->
+            <div class="flex gap-4 mt-6">
+                <button
+                    class="group flex items-center gap-2 border-2 border-white rounded-full px-4 py-2 text-sm font-semibold duration-300 hover:bg-white hover:text-black"
+                >
+                    GitHub
+                    <GitHubIcon width={20} height={20} />
+                </button>
+                <button
+                    class="flex items-center gap-2 border-2 border-white rounded-full px-4 py-2 text-sm font-semibold duration-300 hover:bg-white hover:text-black"
+                >
+                    E-mail
+                    <EmailIcon width={20} height={20} />
+                </button>
+                <button
+                    class="flex items-center gap-2 border-2 border-white rounded-full px-4 py-2 text-sm font-semibold duration-300 hover:bg-white hover:text-black"
+                >
+                    Instagram
+                    <InstagramIcon width={20} height={20} />
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- DIVIDER -->
+    <div class="flex flex-col items-center gap-2 h-24 cursor-pointer">
+        <span>Conocer más</span>
+        <ChevronsDownIcon className="animate-bounce" />
+    </div>
+</header>
+
+<style>
+    header {
+        height: calc(100vh - 64px);
+    }
+</style>
