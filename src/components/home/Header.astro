@@ -3,6 +3,7 @@ import GitHubIcon from "@components/icons/GitHubIcon.astro";
 import EmailIcon from "@components/icons/EmailIcon.astro";
 import InstagramIcon from "@components/icons/InstagramIcon.astro";
 import ChevronsDownIcon from "@components/icons/ChevronsDownIcon.astro";
+import OutlineRoundButton from "@components/OutlineRoundButton.astro";
 ---
 
 <header class="flex flex-col">
@@ -24,24 +25,18 @@ import ChevronsDownIcon from "@components/icons/ChevronsDownIcon.astro";
 
             <!-- BUTTONS -->
             <div class="flex gap-4 mt-6">
-                <button
-                    class="group flex items-center gap-2 border-2 border-white rounded-full px-4 py-2 text-sm font-semibold duration-300 hover:bg-white hover:text-black"
-                >
-                    GitHub
+                <OutlineRoundButton label="GitHub">
                     <GitHubIcon width={20} height={20} />
-                </button>
-                <button
-                    class="flex items-center gap-2 border-2 border-white rounded-full px-4 py-2 text-sm font-semibold duration-300 hover:bg-white hover:text-black"
-                >
-                    E-mail
+                </OutlineRoundButton>
+                <OutlineRoundButton label="E-mail">
                     <EmailIcon width={20} height={20} />
-                </button>
-                <button
-                    class="flex items-center gap-2 border-2 border-white rounded-full px-4 py-2 text-sm font-semibold duration-300 hover:bg-white hover:text-black"
+                </OutlineRoundButton>
+                <OutlineRoundButton
+                    label="Instagram"
+                    href="https://www.instagram.com/nizvan_dev/"
                 >
-                    Instagram
                     <InstagramIcon width={20} height={20} />
-                </button>
+                </OutlineRoundButton>
             </div>
         </div>
     </div>
