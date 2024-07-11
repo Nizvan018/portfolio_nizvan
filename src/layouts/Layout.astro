@@ -42,8 +42,15 @@ const { title } = Astro.props;
 			class="fixed top-0 z-[-2] h-screen w-screen bg-[#000000] bg-[radial-gradient(#ffffff20_1px,#030712_1px)] bg-[size:20px_20px]"
 		>
 		</div>
+		<div
+			class="absolute top-0 z-[-2] h-screen w-screen bg-transparent bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(88,28,135,0.25),rgba(255,255,255,0))]"
+		>
+		</div>
+
 		<Navbar />
-		<slot />
+		<main class="px-6">
+			<slot />
+		</main>
 	</body>
 </html>
 <style is:global>

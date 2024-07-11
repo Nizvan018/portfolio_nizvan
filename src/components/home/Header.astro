@@ -8,23 +8,34 @@ import OutlineRoundButton from "@components/OutlineRoundButton.astro";
 
 <header class="flex flex-col">
     <!-- HEADER -->
-    <div class="flex flex-col justify-center items-center gap-16 h-full">
+    <div
+        class="flex flex-col justify-center items-center gap-12 sm:gap-16 h-full"
+    >
         <!-- TITLE -->
-        <div class="flex flex-col items-center gap-4">
-            <span class="text-lg text-white/80">Desarrollador Web</span>
-            <h1 class="text-9xl font-bold">Fullstack</h1>
+        <div class="flex flex-col items-center sm:gap-4">
+            <span class="text-sm sm:text-lg text-white/80 duration-200"
+                >Desarrollador Web</span
+            >
+            <h1
+                class="text-[84px] sm:text-9xl lg:text-[160px] font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-violet-500 to-sky-500 duration-200 opacity-85"
+            >
+                Fullstack
+            </h1>
         </div>
 
         <!-- MY INFO -->
         <div class="flex flex-col items-center gap-2">
-            <h2 class="text-xl font-semibold">Nizvan Monteón Ricárdez</h2>
-            <span class="font-extralight text-white/80"
+            <h2 class="text-lg sm:text-xl font-semibold duration-200">
+                Nizvan Monteón Ricárdez
+            </h2>
+            <span
+                class="text-sm sm:text-base text-center font-extralight text-white/80"
                 >Desarrollando con amor las páginas web son más bonitas y
                 funcionales</span
             >
 
             <!-- BUTTONS -->
-            <div class="flex gap-4 mt-6">
+            <div class="flex gap-4 mt-12 sm:mt-6">
                 <OutlineRoundButton label="GitHub">
                     <GitHubIcon width={20} height={20} />
                 </OutlineRoundButton>
@@ -43,7 +54,7 @@ import OutlineRoundButton from "@components/OutlineRoundButton.astro";
 
     <!-- DIVIDER -->
     <div class="flex flex-col items-center gap-2 h-24 cursor-pointer">
-        <span>Conocer más</span>
+        <span class="text-sm sm:text-base">Conocer más</span>
         <ChevronsDownIcon className="animate-bounce" />
     </div>
 </header>
