@@ -1,6 +1,9 @@
-<nav class="fixed top-0 flex justify-center w-full px-8">
+<nav
+    id="navbar"
+    class="fixed z-50 top-0 flex justify-center w-full h-16 px-8 border-b border-transparent duration-500"
+>
     <div
-        class="flex items-center justify-between gap-12 w-full max-w-[1200px] h-16"
+        class="flex items-center justify-between gap-12 w-full max-w-[1200px] h-full"
     >
         <a href="/" class="font-bold text-lg min-w-[120px]"> &lt;n /&gt; </a>
         <div class="flex justify-center gap-6 w-full text-sm">
@@ -25,3 +28,29 @@
         </div>
     </div>
 </nav>
+
+<script>
+    window.addEventListener("scroll", function () {
+        const navbar = document.getElementById("navbar");
+
+        if (!navbar) {
+            return;
+        }
+
+        if (window.scrollY > 100) {
+            navbar.classList.add(
+                "bg-gray-950/90",
+                "backdrop-blur-xl",
+                "border-gray-100/20",
+            );
+            navbar.classList.remove("bg-transparent", "border-transparent");
+        } else {
+            navbar.classList.add("bg-transparent", "border-transparent");
+            navbar.classList.remove(
+                "bg-gray-950/90",
+                "backdrop-blur-xl",
+                "border-gray-100/20",
+            );
+        }
+    });
+</script>
