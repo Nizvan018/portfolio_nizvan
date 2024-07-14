@@ -1,10 +1,21 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "@components/home/Header.astro";
+import ExperienceCard from "@components/home/ExperienceCard.astro";
 ---
 
 <Layout title="<nizvan />">
-	<section class="flex flex-col items-start mt-16">
+	<section class="flex flex-col items-center mt-16 pb-16">
 		<Header />
+
+		<div class="flex justify-between gap-8 mt-16">
+			<ExperienceCard color="pink" title="Diseño web" years="+2 años" />
+			<ExperienceCard
+				color="violet"
+				title="Desarrollo web"
+				years="+2 años"
+			/>
+			<ExperienceCard color="sky" title="Programación" years="+4 años" />
+		</div>
 	</section>
 </Layout>
