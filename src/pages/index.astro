@@ -2,16 +2,17 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "@components/home/Header.astro";
 import ExperienceCard from "@components/home/ExperienceCard.astro";
+import Frameworks from "@components/home/Frameworks.astro";
 ---
 
 <Layout title="<nizvan />">
-	<div class="flex flex-col items-center mt-16 pb-16">
+	<div class="flex flex-col items-center gap-16 mt-16 pb-16">
 		<!-- HEADER -->
 		<Header />
 
 		<!-- EXPERIENCE -->
 		<section
-			class="flex flex-col md:flex-row justify-between gap-8 w-full md:w-fit mt-16"
+			class="flex flex-col md:flex-row justify-between gap-8 w-full md:w-fit"
 		>
 			<div class="flex w-full md:w-fit justify-start">
 				<ExperienceCard color="pink" title="Diseño web" years="2" />
@@ -26,6 +27,17 @@ import ExperienceCard from "@components/home/ExperienceCard.astro";
 			<div class="flex w-full md:w-fit justify-end">
 				<ExperienceCard color="sky" title="Programación" years="4" />
 			</div>
+		</section>
+
+		<!-- FRAMEWORKS AND TECHNOLOGIES -->
+		<section
+			class="flex flex-col md:flex-row justify-center gap-8 w-[calc(100%+48px)] px-6 py-12 bg-gray-950 bg-gradient-to-br from-pink-500/10 via-sky-500/5 to-transparent"
+		>
+			<Frameworks />
+
+			<article class="flex flex-col items-center gap-4 w-1/2">
+				<h3 class="text-3xl font-medium">Tecnologías</h3>
+			</article>
 		</section>
 	</div>
 </Layout>
