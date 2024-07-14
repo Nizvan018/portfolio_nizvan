@@ -12,10 +12,15 @@ const { color, title, years } = Astro.props;
     class={`p-[2px] rounded-[10px] ${color} duration-300 hover:bg-${color}-500/60`}
 >
     <div
-        class="flex flex-col items-center gap-4 py-6 px-8 rounded-lg bg-gray-950"
+        class="flex items-center justify-center gap-4 min-w-72 max-w-72 px-6 py-8 rounded-lg bg-gray-950"
     >
-        <h3 class={`text-${color}-500/85 font-semibold`}>{title}</h3>
-        <span class="text-5xl text-white/85">{years}</span>
+        <span class="text-6xl font-semibold text-white/90">+{years}</span>
+        <div>
+            <span class="text-3xl text-white/80">años</span>
+            <h3 class={`text-${color}-500/85 font-semibold text-nowrap`}>
+                {title}
+            </h3>
+        </div>
     </div>
 </div>
 
@@ -27,7 +32,11 @@ const { color, title, years } = Astro.props;
             rgb(31 41 55) 50%,
             rgb(3 7 18)
         );
-        box-shadow: rgba(217, 70, 239, 0.1) 0px -8px 16px;
+        box-shadow: rgba(236, 72, 153, 0.1) 0px -8px 16px;
+        transition: 300ms;
+    }
+    .pink:hover {
+        box-shadow: rgba(217, 70, 239, 0.15) 0px -8px 24px;
     }
 
     .violet {
@@ -37,7 +46,11 @@ const { color, title, years } = Astro.props;
             rgb(31 41 55) 50%,
             rgb(3 7 18)
         );
-        box-shadow: rgba(217, 70, 239, 0.1) 0px -8px 16px;
+        box-shadow: rgba(139, 92, 246, 0.1) 0px -8px 16px;
+        transition: 300ms;
+    }
+    .violet:hover {
+        box-shadow: rgba(139, 92, 246, 0.15) 0px -8px 24px;
     }
 
     .sky {
@@ -47,6 +60,10 @@ const { color, title, years } = Astro.props;
             rgb(31 41 55) 50%,
             rgb(3 7 18)
         );
-        box-shadow: rgba(217, 70, 239, 0.1) 0px -8px 16px;
+        box-shadow: rgba(14, 165, 233, 0.1) 0px -8px 16px;
+        transition: 300ms;
+    }
+    .sky:hover {
+        box-shadow: rgba(14, 165, 233, 0.15) 0px -8px 24px;
     }
 </style>
