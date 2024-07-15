@@ -1,0 +1,57 @@
+---
+import ReactIcon from "@components/icons/ReactIcon.astro";
+import JsIcon from "@components/icons/JsIcon.astro";
+import TsIcon from "@components/icons/TsIcon.astro";
+import CssIcon from "@components/icons/CssIcon.astro";
+import TailwindIcon from "@components/icons/TailwindIcon.astro";
+import PrismaIcon from "@components/icons/PrismaIcon.astro";
+---
+
+<article class="flex flex-col items-center gap-8 w-1/2">
+    <div class="flex flex-col items-center gap-2">
+        <h3 class="text-3xl font-medium">Tecnologías</h3>
+        <p class="font-extralight text-center text-white/50">
+            Estos son las tecnologías que más utilizo en mi día a día para
+            desarrollar proyectos
+        </p>
+    </div>
+
+    <div class="flex flex-wrap items-center justify-center gap-8">
+        <div
+            class="flex flex-col items-center gap-2 duration-300 opacity-50 hover:opacity-100"
+        >
+            <ReactIcon width={40} height={40} />
+            <span class="text-sm font-extralight">React</span>
+        </div>
+        <div
+            class="flex flex-col items-center gap-2 duration-300 opacity-50 hover:opacity-100"
+        >
+            <JsIcon width={40} height={40} />
+            <span class="text-sm font-extralight">JavaScript</span>
+        </div>
+        <div
+            class="flex flex-col items-center gap-2 duration-300 opacity-50 hover:opacity-100"
+        >
+            <TsIcon width={36} height={36} />
+            <span class="text-sm font-extralight">TypeScript</span>
+        </div>
+        <div
+            class="flex flex-col items-center gap-2 duration-300 opacity-50 hover:opacity-100"
+        >
+            <CssIcon width={40} height={40} />
+            <span class="text-sm font-extralight">CSS</span>
+        </div>
+        <div
+            class="flex flex-col items-center gap-2 duration-300 opacity-50 hover:opacity-100"
+        >
+            <TailwindIcon width={40} height={40} />
+            <span class="text-sm font-extralight">TailwindCSS</span>
+        </div>
+        <div
+            class="flex flex-col items-center gap-2 duration-300 opacity-50 hover:opacity-100"
+        >
+            <PrismaIcon width={40} height={40} />
+            <span class="text-sm font-extralight">Prisma</span>
+        </div>
+    </div>
+</article>
