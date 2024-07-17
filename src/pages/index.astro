@@ -60,7 +60,7 @@ import TechnologyCard from "@components/TechnologyCard.astro";
 		</div>
 
 		<!-- PROJECTS -->
-		<section class="flex flex-col gap-16">
+		<section class="flex flex-col items-center gap-16">
 			<div class="flex flex-col items-center gap-6">
 				<h2
 					class="w-fit h-[50px] text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-violet-500 to-sky-500 duration-200 opacity-85"
@@ -74,9 +74,9 @@ import TechnologyCard from "@components/TechnologyCard.astro";
 				</p>
 			</div>
 
-			<div class="flex flex-wrap gap-8">
+			<div class="flex flex-wrap gap-8 max-w-[1000px]">
 				<article
-					class="overflow-hidden w-full md:w-1/2 p-[2px] rounded-[10px] bg-gradient-to-b from-pink-500/50 to-gray-900"
+					class="overflow-hidden w-full md:w-1/2 p-[2px] rounded-[10px] bg-gradient-to-b from-pink-500/60 from-30% to-gray-900"
 				>
 					<div class="flex flex-col w-full rounded-lg radial-bg">
 						<div class="w-full h-64 bg-gray-800 rounded-t-lg">
@@ -122,7 +122,7 @@ import TechnologyCard from "@components/TechnologyCard.astro";
 	.radial-bg {
 		background-image: radial-gradient(
 			100% 100% at top,
-			rgba(236, 72, 153, 0.6),
+			rgba(236, 72, 153, 0.3),
 			rgb(3 7 18)
 		);
 	}
