@@ -4,11 +4,7 @@ import Header from "@components/home/Header.astro";
 import ExperienceCard from "@components/home/ExperienceCard.astro";
 import Frameworks from "@components/home/Frameworks.astro";
 import Technologies from "@components/home/Technologies.astro";
-import TechnologyCard from "@components/TechnologyCard.astro";
-import Image from "astro/components/Image.astro";
-import spotify from "public/images/spotify_project_image.png";
-import AstroIcon from "@components/icons/AstroIcon.astro";
-import ProjectCard from "@components/home/ProjectCard.astro";
+import Projects from "@components/home/Projects.astro";
 ---
 
 <Layout title="<nizvan />">
@@ -64,94 +60,6 @@ import ProjectCard from "@components/home/ProjectCard.astro";
 		</div>
 
 		<!-- PROJECTS -->
-		<section class="flex flex-col items-center gap-16">
-			<div class="flex flex-col items-center gap-6">
-				<h2
-					class="w-fit h-[50px] text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-violet-500 to-sky-500 duration-200 opacity-85"
-				>
-					Proyectos
-				</h2>
-				<p class="text-center text-lg text-white/80">
-					Conoce algunos de mis proyectos web más interesantes,
-					aquellos que más me apasionan y que me ayudan a mejorar mis
-					habilidades y a aprender nuevas tecnologías
-				</p>
-			</div>
-
-			<div class="flex flex-wrap gap-8 max-w-[1000px]">
-				<ProjectCard
-					image={spotify}
-					alt="Spotify mockup image"
-					title="Clon de spotify"
-					description="Es una copia del diseño y funcionamiento de la aplicación de escritorio de Spotify hecha con Astro. La utilice principalmente para aprender las bases de Framework y para conocer el funcionamiento de las View Transitions."
-					from="from-violet-500/50"
-					rgba="rgba(245, 243, 255, 0.3)"
-				>
-					<TechnologyCard
-						textColor="text-pink-500"
-						from="from-pink-500/80"
-						text="Astro"
-					>
-						<AstroIcon width={16} height={16} />
-					</TechnologyCard>
-					<TechnologyCard
-						textColor="text-sky-500"
-						from="from-sky-500/80"
-						text="React"
-					/>
-					<TechnologyCard
-						textColor="text-blue-500"
-						from="from-blue-500/80"
-						text="TypeScript"
-					/>
-					<TechnologyCard
-						textColor="text-cyan-500"
-						from="from-cyan-500/80"
-						text="Tailwind"
-					/>
-				</ProjectCard>
-				<ProjectCard
-					image={spotify}
-					alt="Spotify mockup image"
-					title="Clon de spotify"
-					description="Es una copia del diseño y funcionamiento de la aplicación de escritorio de Spotify hecha con Astro. La utilice principalmente para aprender las bases de Framework y para conocer el funcionamiento de las View Transitions."
-					from="from-violet-500/50"
-					rgba="rgba(245, 243, 255, 0.3)"
-				>
-					<TechnologyCard
-						textColor="text-pink-500"
-						from="from-pink-500/80"
-						text="Astro"
-					>
-						<AstroIcon width={16} height={16} />
-					</TechnologyCard>
-					<TechnologyCard
-						textColor="text-sky-500"
-						from="from-sky-500/80"
-						text="React"
-					/>
-					<TechnologyCard
-						textColor="text-blue-500"
-						from="from-blue-500/80"
-						text="TypeScript"
-					/>
-					<TechnologyCard
-						textColor="text-cyan-500"
-						from="from-cyan-500/80"
-						text="Tailwind"
-					/>
-				</ProjectCard>
-			</div>
-		</section>
+		<Projects />
 	</div>
 </Layout>
-
-<style>
-	.radial-bg {
-		background-image: radial-gradient(
-			100% 100% at top,
-			rgba(245, 243, 255, 0.3),
-			rgb(3 7 18)
-		);
-	}
-</style>
