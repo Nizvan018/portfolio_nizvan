@@ -1,0 +1,42 @@
+---
+import ExperienceCard from "./ExperienceCard.astro";
+import Frameworks from "./Frameworks.astro";
+import Technologies from "./Technologies.astro";
+---
+
+<div class="flex flex-col items-center gap-20">
+    <!-- EXPERIENCE -->
+    <section
+        class="flex flex-col md:flex-row justify-between gap-8 w-full md:w-fit"
+    >
+        <div class="flex w-full md:w-fit justify-start">
+            <ExperienceCard color="pink" title="Diseño web" years="2" />
+        </div>
+        <div class="flex w-full md:w-fit justify-center">
+            <ExperienceCard color="violet" title="Desarrollo web" years="2" />
+        </div>
+        <div class="flex w-full md:w-fit justify-end">
+            <ExperienceCard color="sky" title="Programación" years="4" />
+        </div>
+    </section>
+
+    <!-- FRAMEWORKS AND TECHNOLOGIES -->
+    <section
+        class="flex flex-col md:flex-row justify-center gap-16 w-[100vw] px-6 py-12 bg-gray-950 bg-gradient-to-br from-pink-500/10 via-sky-500/5 to-transparent"
+    >
+        <Frameworks />
+        <Technologies />
+    </section>
+
+    <div class="flex flex-col items-center gap-8">
+        <p class="text-2xl font-medium text-center">
+            Siempre aprendiendo nuevas tecnologías
+        </p>
+
+        <a
+            href=""
+            class="w-fit py-3 px-6 rounded-full text-gray-950 font-bold duration-300 bg-white hover:shadow-lg hover:bg-white/90"
+            >Contáctame</a
+        >
+    </div>
+</div>
