@@ -3,16 +3,19 @@ import Layout from "../layouts/Layout.astro";
 import Header from "@components/home/Header.astro";
 import Experience from "@components/home/Experience.astro";
 import Projects from "@components/home/Projects.astro";
+import MyInfo from "@components/home/MyInfo.astro";
 ---
 
 <Layout title="<nizvan />">
 	<div
-		class="flex flex-col items-center gap-40 mt-16 pb-16 w-full max-w-[1200px]"
+		class="flex flex-col items-center gap-48 mt-16 pb-16 w-full max-w-[1200px]"
 	>
 		<Header />
 
 		<Experience />
 
 		<Projects />
+
+		<MyInfo />
 	</div>
 </Layout>
