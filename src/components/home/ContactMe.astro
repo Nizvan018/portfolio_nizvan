@@ -6,65 +6,99 @@ import EmailIcon from "@components/icons/EmailIcon.astro";
 import ContactForm from "@components/react/ContactForm";
 ---
 
-<section
-    id="contactMe"
-    class="p-[2px] rounded-[10px] white duration-300 hover:bg-white-500/60 w-full"
->
-    <div class="flex gap-12 w-full p-12 rounded-lg bg-gray-950">
-        <article class="flex flex-col gap-12 w-full">
-            <div class="flex flex-col gap-4">
-                <h2 class="text-4xl font-bold">¿En qué te puedo ayudar?</h2>
-                <p class="text-white/80 font-light">
-                    Si necesitas mis servicios como programador web ¡Estaré
-                    encantado de trabajar contigo!
-                </p>
-            </div>
+<section id="contactMe" class="flex flex-col gap-8">
+    <div class="flex flex-col gap-4 md:hidden">
+        <h2 class="text-4xl font-bold">¿En qué te puedo ayudar?</h2>
+        <p class="text-white/80 font-light">
+            Si necesitas mis servicios como programador web ¡Estaré encantado de
+            trabajar contigo!
+        </p>
+    </div>
 
-            <div class="flex flex-col gap-4">
-                <h3 class="text-xl font-bold">Otros medios</h3>
-                <div class="flex flex-col gap-2">
-                    <LinkWithIcon
-                        href="https://www.instagram.com/nizvan_dev/"
-                        label="nizvan_dev"
-                    >
-                        <InstagramIcon width={20} height={20} />
-                    </LinkWithIcon>
-
-                    <LinkWithIcon
-                        href="https://github.com/Nizvan018"
-                        label="Nizvan018"
-                    >
-                        <GitHubIcon width={20} height={20} />
-                    </LinkWithIcon>
-                    <span class="group flex items-center gap-1">
-                        <EmailIcon width={20} height={20} />
-                        <span
-                            class="text-white/80 font-light duration-200 group-hover:text-white"
-                            >nizvan.dev@gmail.com</span
-                        >
-                    </span>
+    <div
+        class="p-[2px] rounded-[10px] white duration-300 hover:bg-white-500/60 w-full"
+    >
+        <div
+            class="flex flex-col md:flex-row gap-12 w-full p-12 rounded-lg bg-gray-950"
+        >
+            <article class="hidden md:flex flex-col gap-12 w-full">
+                <div class="flex-col gap-4">
+                    <h2 class="text-4xl font-bold">¿En qué te puedo ayudar?</h2>
+                    <p class="text-white/80 font-light">
+                        Si necesitas mis servicios como programador web ¡Estaré
+                        encantado de trabajar contigo!
+                    </p>
                 </div>
-            </div>
-        </article>
 
-        <article class="flex flex-col gap-8 w-full">
-            <div class="flex flex-col gap-4">
-                <span>
-                    <h3
-                        class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-violet-500 to-sky-500"
-                    >
-                        Contáctame
-                    </h3>
-                </span>
-                <p class="text-white/80 font-light">
-                    Puedes comunicarte conmigo, escribir tu razón principal y
-                    tus datos de contacto, en cuanto pueda atenderé tu mensaje.
-                    ¡Muchas gracias!
-                </p>
-            </div>
+                <div class="flex flex-col gap-4">
+                    <h3 class="text-xl font-bold">Otros medios</h3>
+                    <div class="flex flex-col gap-2">
+                        <LinkWithIcon
+                            href="https://www.instagram.com/nizvan_dev/"
+                            label="nizvan_dev"
+                        >
+                            <InstagramIcon width={20} height={20} />
+                        </LinkWithIcon>
 
-            <ContactForm client:visible />
-        </article>
+                        <LinkWithIcon
+                            href="https://github.com/Nizvan018"
+                            label="Nizvan018"
+                        >
+                            <GitHubIcon width={20} height={20} />
+                        </LinkWithIcon>
+                        <span class="group flex items-center gap-1">
+                            <EmailIcon width={20} height={20} />
+                            <span
+                                class="text-white/80 font-light duration-200 group-hover:text-white"
+                                >nizvan.dev@gmail.com</span
+                            >
+                        </span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="flex flex-col gap-8 w-full">
+                <div class="flex flex-col gap-4">
+                    <span class="w-fit">
+                        <h3
+                            class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-violet-500 to-sky-500"
+                        >
+                            Contáctame
+                        </h3>
+                    </span>
+                    <p class="text-white/80 font-light">
+                        Puedes comunicarte conmigo, escribir tu razón principal
+                        y tus datos de contacto, en cuanto pueda atenderé tu
+                        mensaje. ¡Muchas gracias!
+                    </p>
+                </div>
+
+                <ContactForm client:visible />
+            </article>
+        </div>
+    </div>
+
+    <div class="flex md:hidden flex-col gap-4">
+        <h3 class="text-xl font-bold">Otros medios</h3>
+        <div class="flex flex-col gap-2">
+            <LinkWithIcon
+                href="https://www.instagram.com/nizvan_dev/"
+                label="nizvan_dev"
+            >
+                <InstagramIcon width={20} height={20} />
+            </LinkWithIcon>
+
+            <LinkWithIcon href="https://github.com/Nizvan018" label="Nizvan018">
+                <GitHubIcon width={20} height={20} />
+            </LinkWithIcon>
+            <span class="group flex items-center gap-1">
+                <EmailIcon width={20} height={20} />
+                <span
+                    class="text-white/80 font-light duration-200 group-hover:text-white"
+                    >nizvan.dev@gmail.com</span
+                >
+            </span>
+        </div>
     </div>
 </section>
 
