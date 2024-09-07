@@ -19,6 +19,7 @@ import "@fontsource/be-vietnam-pro/800-italic.css";
 import "@fontsource/be-vietnam-pro/900-italic.css";
 
 import Navbar from "@components/Navbar.astro";
+import CustomToaster from "@components/react/CustomToaster";
 
 interface Props {
 	title: string;
@@ -38,6 +39,7 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<CustomToaster client:load />
 		<div
 			class="fixed top-0 z-[-2] h-screen w-screen bg-[#000000] bg-[radial-gradient(#ffffff20_1px,#030712_1px)] bg-[size:20px_20px]"
 		>
@@ -60,6 +62,7 @@ const { title } = Astro.props;
 
 	html {
 		font-family: "Be Vietnam Pro", sans-serif;
+		scroll-behavior: smooth;
 	}
 
 	body {
