@@ -5,6 +5,8 @@ export default function ContactForm() {
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
 
     const submit = handleSubmit(async (data) => {
+        toast.loading("Enviando correo");
+
         const resEmail = await fetch("/api/sendEmail", {
             method: "POST",
             headers: {
@@ -24,6 +26,7 @@ export default function ContactForm() {
             toast.error("Error al enviar el correo");
         }
 
+        toast.dismiss();
         toast.success("¡Recibido!, contactaré contigo lo antes posible");
 
         reset({
