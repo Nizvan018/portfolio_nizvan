@@ -5,9 +5,30 @@ export default function ContactForm() {
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
 
     const submit = handleSubmit(async (data) => {
-        console.log(data);
+        toast.loading("Enviando correo");
 
+        const resEmail = await fetch("/api/sendEmail", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                name: data.name,
+                email: data.email,
+                message: data.message
+            })
+        });
+
+        if (resEmail.status == 500) {
+            const error = await resEmail.json();
+            console.log(error);
+
+            toast.error("Error al enviar el correo");
+        }
+
+        toast.dismiss();
         toast.success("¡Recibido!, contactaré contigo lo antes posible");
+
         reset({
             "email": "",
             "name": "",
