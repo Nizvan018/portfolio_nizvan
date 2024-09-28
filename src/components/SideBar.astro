@@ -1,0 +1,38 @@
+---
+import GitHubIcon from "./icons/GitHubIcon.astro";
+import InstagramIcon from "./icons/InstagramIcon.astro";
+---
+
+<div
+    class="w-full flex gap-4 text-sm px-8 py-4 border-b border-gray-100/20 bg-gray-950/80 backdrop-blur-md"
+>
+    <div class="flex flex-col gap-4 w-full text-sm">
+        <a class="opacity-50 duration-200 hover:opacity-100" href="/about"
+            >Sobre mí</a
+        >
+        <a class="opacity-50 duration-200 hover:opacity-100" href="/template"
+            >Esta plantilla</a
+        >
+        <a class="opacity-50 duration-200 hover:opacity-100" href="/unizverse"
+            >Próximamente</a
+        >
+    </div>
+    <div class="flex gap-4 items-end">
+        <a
+            href="https://github.com/Nizvan018"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="opacity-50 duration-200 hover:opacity-100"
+        >
+            <GitHubIcon width={20} height={20} />
+        </a>
+        <a
+            href="https://www.instagram.com/nizvan_dev/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="opacity-50 duration-200 hover:opacity-100"
+        >
+            <InstagramIcon width={20} height={20} />
+        </a>
+    </div>
+</div>
