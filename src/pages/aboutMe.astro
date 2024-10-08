@@ -2,6 +2,7 @@
 import Layout from "@layouts/Layout.astro";
 import Header from "@components/aboutMe/Header.astro";
 import Hobbies from "@components/aboutMe/Hobbies.astro";
+import Personality from "@components/react/aboutMe/Personality";
 ---
 
 <Layout title="<nizvan />">
@@ -11,5 +12,7 @@ import Hobbies from "@components/aboutMe/Hobbies.astro";
         <Header />
 
         <Hobbies />
+
+        <Personality client:idle />
     </div>
 </Layout>
