@@ -3,6 +3,7 @@ import Layout from "@layouts/Layout.astro";
 import Header from "@components/aboutMe/Header.astro";
 import Hobbies from "@components/aboutMe/Hobbies.astro";
 import Personality from "@components/react/aboutMe/Personality";
+import Studies from "@components/aboutMe/Studies.astro";
 ---
 
 <Layout title="<nizvan />">
@@ -14,5 +15,7 @@ import Personality from "@components/react/aboutMe/Personality";
         <Hobbies />
 
         <Personality client:idle />
+
+        <Studies />
     </div>
 </Layout>

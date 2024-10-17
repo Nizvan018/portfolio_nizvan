@@ -5,7 +5,7 @@ export default function Personality() {
     const [hoveredItem, setHoveredItem] = useState(0);
 
     return (
-        <section className="flex flex-col items-center gap-16">
+        <section className="flex flex-col items-center gap-16 w-full">
             <div className="flex flex-col items-center gap-6">
                 <h2 className="w-fit h-[50px] text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-violet-500 to-sky-500 duration-200 opacity-85">
                     Mi personalidad
@@ -16,8 +16,8 @@ export default function Personality() {
                 </p>
             </div>
 
-            <div className="flex flex-col md:flex-row gap-8 w-full">
-                <div className="grid grid-cols-4 md:grid-cols-2 gap-6 md:gap-4 w-full">
+            <div className="flex flex-col md:flex-row gap-8 w-full max-w-[1000px]">
+                <div className="grid grid-cols-4 md:grid-cols-2 gap-4 sm:gap-6 md:gap-4 w-full">
                     <div onMouseEnter={() => setHoveredItem(1)} onMouseLeave={() => setHoveredItem(0)}>
                         <SquareItem number={1} heading="Perfeccionista" bgStyle="pink-br" />
                     </div>
