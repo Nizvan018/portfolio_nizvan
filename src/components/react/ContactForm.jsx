@@ -87,7 +87,7 @@ export default function ContactForm() {
                 <button
                     onClick={submit}
                     type="button"
-                    class="font-semibold py-3 px-6 rounded-lg bg-gradient-to-r from-pink-500/85 via-violet-500/85 to-sky-500/85 duration-200 hover:opacity-80"
+                    className="font-semibold py-3 px-6 rounded-lg bg-gradient-to-r from-pink-500/85 via-violet-500/85 to-sky-500/85 duration-200 hover:opacity-80"
                 >
                     Enviar mensaje
                 </button>

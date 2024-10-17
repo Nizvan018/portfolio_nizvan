@@ -1,5 +1,7 @@
+/* ESTILOS POR DEFECTO */
+
 .pink-br {
-    background-image: radial-gradient(at bottom right,
+    background-image: radial-gradient(at bottom left,
             rgba(236, 72, 153, 0.2) 30%,
             rgba(236, 72, 153, 0.1),
             rgb(3 7 18));
@@ -11,7 +13,7 @@
 }
 
 .pink-tl {
-    background-image: radial-gradient(at top left,
+    background-image: radial-gradient(at bottom left,
             rgba(236, 72, 153, 0.2) 30%,
             rgba(236, 72, 153, 0.1),
             rgb(3 7 18));
@@ -27,7 +29,6 @@
             rgba(14, 165, 233, 0.2) 30%,
             rgba(14, 165, 233, 0.1),
             rgb(3 7 18));
-    transition: 300ms;
 }
 
 .blue-bl:hover {
@@ -35,13 +36,44 @@
 }
 
 .blue-tr {
-    background-image: radial-gradient(at top right,
+    background-image: radial-gradient(at bottom left,
             rgba(14, 165, 233, 0.2) 30%,
             rgba(14, 165, 233, 0.1),
             rgb(3 7 18));
-    transition: 300ms;
 }
 
 .blue-tr:hover {
     box-shadow: rgba(14, 165, 233, 0.15) 0px 0px 32px;
+}
+
+/* ESTILOS PARA PANTALLA MEDIANA EN ADELANTE (768PX) */
+
+@media (min-width: 768px) {
+    .pink-br {
+        background-image: radial-gradient(at bottom right,
+                rgba(236, 72, 153, 0.2) 30%,
+                rgba(236, 72, 153, 0.1),
+                rgb(3 7 18));
+    }
+
+    .pink-tl {
+        background-image: radial-gradient(at top left,
+                rgba(236, 72, 153, 0.2) 30%,
+                rgba(236, 72, 153, 0.1),
+                rgb(3 7 18));
+    }
+
+    .blue-bl {
+        background-image: radial-gradient(at bottom left,
+                rgba(14, 165, 233, 0.2) 30%,
+                rgba(14, 165, 233, 0.1),
+                rgb(3 7 18));
+    }
+
+    .blue-tr {
+        background-image: radial-gradient(at top right,
+                rgba(14, 165, 233, 0.2) 30%,
+                rgba(14, 165, 233, 0.1),
+                rgb(3 7 18));
+    }
 }
