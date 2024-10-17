@@ -5,7 +5,7 @@ export default function Personality() {
     const [hoveredItem, setHoveredItem] = useState(0);
 
     return (
-        <section className="flex flex-col items-center gap-16 w-full">
+        <section id="personality" className="flex flex-col items-center gap-16 w-full scroll-target">
             <div className="flex flex-col items-center gap-6">
                 <h2 className="w-fit h-[50px] text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-violet-500 to-sky-500 duration-200 opacity-85">
                     Mi personalidad

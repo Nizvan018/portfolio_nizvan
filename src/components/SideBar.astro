@@ -6,17 +6,53 @@ import InstagramIcon from "./icons/InstagramIcon.astro";
 <div
     class="w-full flex gap-4 text-sm px-8 py-4 border-b border-gray-100/20 bg-gray-950/80 backdrop-blur-md"
 >
-    <div class="flex flex-col gap-4 w-full text-sm">
-        <a class="opacity-50 duration-200 hover:opacity-100" href="/aboutMe"
-            >Sobre mí</a
-        >
-        <a class="opacity-50 duration-200 hover:opacity-100" href="/template"
-            >Esta plantilla</a
-        >
-        <a class="opacity-50 duration-200 hover:opacity-100" href="/unizverse"
-            >Próximamente</a
-        >
-    </div>
+    <!-- ENLACES PARA HOME PAGE -->
+    {
+        Astro.url.pathname == "/" && (
+            <div class="flex flex-col gap-4 w-full text-sm">
+                <a
+                    class="opacity-50 duration-200 hover:opacity-100"
+                    href="#experience"
+                >
+                    Experiencia
+                </a>
+                <a
+                    class="opacity-50 duration-200 hover:opacity-100"
+                    href="#projects"
+                >
+                    Proyectos
+                </a>
+                <a
+                    class="opacity-50 duration-200 hover:opacity-100"
+                    href="/aboutMe"
+                >
+                    Sobre mí
+                </a>
+            </div>
+        )
+    }
+    <!-- ENLACES PARA ABOUT ME -->
+    {
+        Astro.url.pathname == "/aboutMe" && (
+            <div class="flex flex-col gap-4 w-full text-sm">
+                <a class="opacity-50 duration-200 hover:opacity-100" href="/">
+                    Inicio
+                </a>
+                <a
+                    class="opacity-50 duration-200 hover:opacity-100"
+                    href="#personality"
+                >
+                    Personalidad
+                </a>
+                <a
+                    class="opacity-50 duration-200 hover:opacity-100"
+                    href="#studies"
+                >
+                    Estudios
+                </a>
+            </div>
+        )
+    }
     <div class="flex gap-4 items-end">
         <a
             href="https://github.com/Nizvan018"
