@@ -91,6 +91,8 @@ export default function ContactForm() {
                 >
                     Enviar mensaje
                 </button>
+
+                <span className="text-xs italic font-light text-white/60">* Los datos proporcionados en este formulario serán utilizados únicamente para contactar contigo y no serán compartidos con terceros ni procesados.</span>
             </form>
         </>
     )
