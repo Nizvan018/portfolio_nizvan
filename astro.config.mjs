@@ -1,12 +1,28 @@
-import { defineConfig } from 'astro/config';
-import tailwind from "@astrojs/tailwind";
+import { defineConfig, envField } from 'astro/config';
 
 import react from "@astrojs/react";
 
+import tailwindcss from "@tailwindcss/vite";
+
+import vercel from "@astrojs/vercel";
+
 // https://astro.build/config
 export default defineConfig({
-  output: "hybrid",
-  integrations: [tailwind(), react({
+  output: "static",
+
+  integrations: [react({
     experimentalReactChildren: true
-  })]
+  })],
+
+  vite: {
+    plugins: [tailwindcss()]
+  },
+
+  adapter: vercel(),
+
+  env: {
+    schema: {
+      RESEND_KEY: envField.string({ context: "server", access: "secret" })
+    }
+  }
 });

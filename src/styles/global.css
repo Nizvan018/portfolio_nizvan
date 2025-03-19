@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+:root {
+    color-scheme: light dark;
+}
+
+html {
+    font-family: "Be Vietnam Pro", sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @apply bg-gray-950;
+    overflow-x: hidden;
+}
+
+.scroll-target {
+    scroll-margin-top: 80px;
+}

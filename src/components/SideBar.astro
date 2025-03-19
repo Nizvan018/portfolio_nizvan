@@ -1,6 +1,8 @@
 ---
 import GitHubIcon from "./icons/GitHubIcon.astro";
 import InstagramIcon from "./icons/InstagramIcon.astro";
+
+const pathname = Astro.url.pathname;
 ---
 
 <div
@@ -8,7 +10,7 @@ import InstagramIcon from "./icons/InstagramIcon.astro";
 >
     <!-- ENLACES PARA HOME PAGE -->
     {
-        Astro.url.pathname == "/" && (
+        pathname == "/" && (
             <div class="flex flex-col gap-4 w-full text-sm">
                 <a
                     class="opacity-50 duration-200 hover:opacity-100"
@@ -33,7 +35,7 @@ import InstagramIcon from "./icons/InstagramIcon.astro";
     }
     <!-- ENLACES PARA ABOUT ME -->
     {
-        Astro.url.pathname == "/aboutMe" && (
+        pathname.startsWith("/aboutMe") && (
             <div class="flex flex-col gap-4 w-full text-sm">
                 <a class="opacity-50 duration-200 hover:opacity-100" href="/">
                     Inicio

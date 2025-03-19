@@ -1,6 +1,8 @@
 ---
 import MenuIcon from "./icons/MenuIcon.astro";
 import SideBar from "./SideBar.astro";
+
+const pathname = Astro.url.pathname;
 ---
 
 <nav
@@ -13,8 +15,8 @@ import SideBar from "./SideBar.astro";
         <a href="/" class="font-bold text-lg text-nowrap"> &lt;n /&gt; </a>
         <!-- ENLACES PARA HOME PAGE -->
         {
-            Astro.url.pathname == "/" && (
-                <div class="hidden -translate-y-16 lg:translate-y-0 md:flex justify-center gap-8 w-full text-sm duration-300 ease-in-out">
+            pathname === "/" && (
+                <div class="hidden -translate-y-16 lg:translate-y-0 md:flex justify-center gap-10 w-full text-sm duration-300 ease-in-out">
                     <a
                         class="opacity-50 duration-200 hover:opacity-100"
                         href="#experience"
@@ -38,8 +40,8 @@ import SideBar from "./SideBar.astro";
         }
         <!-- ENLACES PARA ABOUT ME -->
         {
-            Astro.url.pathname == "/aboutMe" && (
-                <div class="hidden -translate-y-16 lg:translate-y-0 md:flex justify-center gap-8 w-full text-sm duration-300 ease-in-out">
+            pathname.startsWith("/aboutMe") && (
+                <div class="hidden -translate-y-16 lg:translate-y-0 md:flex justify-center gap-10 w-full text-sm duration-300 ease-in-out">
                     <a
                         class="opacity-50 duration-200 hover:opacity-100"
                         href="/"
@@ -84,65 +86,79 @@ import SideBar from "./SideBar.astro";
 </div>
 
 <script>
-    const navbar = document.getElementById("navbar");
-    const sideBar = document.getElementById("sideBar");
-    const menuButton = document.getElementById("menuButton");
+    document.addEventListener("astro:page-load", () => {
+        const navbar = document.getElementById("navbar");
+        const sideBar = document.getElementById("sideBar");
+        const menuButton = document.getElementById("menuButton");
 
-    menuButton?.addEventListener("click", function () {
-        sideBar?.classList.toggle("-top-32");
-        sideBar?.classList.toggle("top-16");
-    });
+        menuButton?.addEventListener("click", function () {
+            sideBar?.classList.toggle("-top-32");
+            sideBar?.classList.toggle("top-16");
+        });
 
-    // Función para scroll:
-    window.addEventListener("scroll", function () {
-        if (!navbar) {
-            return;
-        }
-
-        if (window.innerWidth >= 1024) {
-            if (window.scrollY > 100) {
-                navbar.classList.add(
-                    "bg-gray-950/80",
-                    "backdrop-blur-md",
-                    "border-gray-100/20",
-                );
-                navbar.classList.remove("bg-transparent", "border-transparent");
-            } else {
-                navbar.classList.add("bg-transparent", "border-transparent");
-                navbar.classList.remove(
-                    "bg-gray-950/80",
-                    "backdrop-blur-md",
-                    "border-gray-100/20",
-                );
+        // Función para scroll:
+        window.addEventListener("scroll", function () {
+            if (!navbar) {
+                return;
             }
-        }
-    });
 
-    // Función para resize:
-    function detectWidthWindow() {
-        if (window.innerWidth < 1024) {
-            navbar?.classList.add(
-                "bg-gray-950/80",
-                "backdrop-blur-md",
-                "border-gray-100/20",
-            );
-            navbar?.classList.remove("bg-transparent", "border-transparent");
-        } else {
-            sideBar?.classList.add("-top-32");
-            sideBar?.classList.remove("top-16");
+            if (window.innerWidth >= 1024) {
+                if (window.scrollY > 100) {
+                    navbar.classList.add(
+                        "bg-gray-950/80",
+                        "backdrop-blur-md",
+                        "border-gray-100/20",
+                    );
+                    navbar.classList.remove(
+                        "bg-transparent",
+                        "border-transparent",
+                    );
+                } else {
+                    navbar.classList.add(
+                        "bg-transparent",
+                        "border-transparent",
+                    );
+                    navbar.classList.remove(
+                        "bg-gray-950/80",
+                        "backdrop-blur-md",
+                        "border-gray-100/20",
+                    );
+                }
+            }
+        });
 
-            if (window.scrollY < 100) {
-                navbar?.classList.add("bg-transparent", "border-transparent");
+        // Función para resize:
+        function detectWidthWindow() {
+            if (window.innerWidth < 1024) {
+                navbar?.classList.add(
+                    "bg-gray-950/80",
+                    "backdrop-blur-md",
+                    "border-gray-100/20",
+                );
                 navbar?.classList.remove(
-                    "bg-gray-950/80",
-                    "backdrop-blur-md",
-                    "border-gray-100/20",
+                    "bg-transparent",
+                    "border-transparent",
                 );
+            } else {
+                sideBar?.classList.add("-top-32");
+                sideBar?.classList.remove("top-16");
+
+                if (window.scrollY < 100) {
+                    navbar?.classList.add(
+                        "bg-transparent",
+                        "border-transparent",
+                    );
+                    navbar?.classList.remove(
+                        "bg-gray-950/80",
+                        "backdrop-blur-md",
+                        "border-gray-100/20",
+                    );
+                }
             }
         }
-    }
 
-    detectWidthWindow();
+        detectWidthWindow();
 
-    window.addEventListener("resize", detectWidthWindow);
+        window.addEventListener("resize", detectWidthWindow);
+    });
 </script>
