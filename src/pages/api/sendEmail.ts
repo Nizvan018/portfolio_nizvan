@@ -1,3 +1,5 @@
+export const prerender = true;
+
 import { RESEND_KEY } from "astro:env/server";
 import type { APIRoute } from "astro";
 import { EmailTemplate } from "@components/react/email-template";
