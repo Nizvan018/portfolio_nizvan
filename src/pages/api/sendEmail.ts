@@ -1,10 +1,11 @@
 export const prerender = false;
 
+import { RESEND_KEY } from "astro:env/server";
 import type { APIRoute } from "astro";
 import { EmailTemplate } from "@components/react/email-template";
 import { Resend } from "resend";
 
-const resend = new Resend(import.meta.env.RESEND_KEY);
+const resend = new Resend(RESEND_KEY);
 
 export const POST: APIRoute = async ({ params, request }) => {
     try {
@@ -13,7 +14,7 @@ export const POST: APIRoute = async ({ params, request }) => {
         const { data, error } = await resend.emails.send({
             from: 'Acme <onboarding@resend.dev>',
             to: ['nizvan.dev@gmail.com'],
-            subject: 'Hello world',
+            subject: `Solicitud de ${name} desde nizvan dev landing`,
             react: EmailTemplate({
                 name,
                 email,
