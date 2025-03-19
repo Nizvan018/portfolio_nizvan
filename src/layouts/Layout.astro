@@ -18,10 +18,11 @@ import "@fontsource/be-vietnam-pro/700-italic.css";
 import "@fontsource/be-vietnam-pro/800-italic.css";
 import "@fontsource/be-vietnam-pro/900-italic.css";
 
+import "@styles/global.css";
 import Navbar from "@components/Navbar.astro";
 import CustomToaster from "@components/react/CustomToaster";
 import Footer from "@components/Footer.astro";
-import { ViewTransitions } from "astro:transitions";
+import { ClientRouter } from "astro:transitions";
 
 interface Props {
 	title: string;
@@ -31,7 +32,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
@@ -39,7 +40,7 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-		<ViewTransitions />
+		<ClientRouter />
 	</head>
 	<body>
 		<CustomToaster client:load />
@@ -59,25 +60,3 @@ const { title } = Astro.props;
 		<Footer />
 	</body>
 </html>
-<style is:global>
-	:root {
-		color-scheme: light dark;
-	}
-
-	html {
-		font-family: "Be Vietnam Pro", sans-serif;
-		scroll-behavior: smooth;
-	}
-
-	body {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		@apply bg-gray-950;
-		overflow-x: hidden;
-	}
-
-	.scroll-target {
-		scroll-margin-top: 80px;
-	}
-</style>
