@@ -1,0 +1,95 @@
+---
+import TechnologyCard from "@components/TechnologyCard.astro";
+import spotify from "public/images/spotify_project_image.png";
+import klar from "public/images/klar_project_image.png";
+import AstroIcon from "@components/icons/AstroIcon.astro";
+import ExpoIcon from "@components/icons/ExpoIcon.astro";
+import ProjectCard from "@components/home/ProjectCard.astro";
+---
+
+<section id="projects" class="flex flex-col items-center gap-16 scroll-target">
+    <div class="flex flex-col items-center gap-6">
+        <h2
+            class="w-fit h-[50px] text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-violet-500 to-sky-500 duration-200 opacity-85"
+        >
+            Proyectos
+        </h2>
+        <p
+            class="text-center text-base md:text-lg font-extralight text-white/80"
+        >
+            Conoce algunos de mis proyectos web más interesantes, aquellos con
+            los que más me divertí desarrollando y los que más me ayudaron a
+            mejorar mis habilidades, o a aprender nuevas tecnologías
+        </p>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-8 max-w-[1000px]">
+        <ProjectCard
+            image={spotify}
+            alt="Spotify mockup image"
+            title="Clon de Spotify"
+            description="Es una copia del diseño y funcionamiento de la aplicación de escritorio de Spotify hecha con Astro. La utilice principalmente para aprender las bases de Framework y para conocer el funcionamiento de las View Transitions."
+            from="from-violet-500/50"
+            rgba="rgba(245, 243, 255, 0.3)"
+        >
+            <TechnologyCard
+                textColor="text-pink-500"
+                from="from-pink-500/80"
+                text="Astro"
+            >
+                <AstroIcon width={16} height={16} />
+            </TechnologyCard>
+            <TechnologyCard
+                textColor="text-sky-500"
+                from="from-sky-500/80"
+                text="React"
+            />
+            <TechnologyCard
+                textColor="text-blue-500"
+                from="from-blue-500/80"
+                text="TypeScript"
+            />
+            <TechnologyCard
+                textColor="text-cyan-500"
+                from="from-cyan-500/80"
+                text="Tailwind"
+            />
+        </ProjectCard>
+        <ProjectCard
+            image={klar}
+            alt="Spotify mockup image"
+            title="Clon de Klar"
+            description="Este proyecto simula el funcionamiento de la aplicación original (sin realizar ningún movimiento bancario real). Mi objetivo con este proyecto fue mejorar mis habilidades Fullstack en React Native con Expo."
+            from="from-purple-500/50"
+            rgba="rgba(168, 85, 247, 0.3)"
+        >
+            <TechnologyCard
+                textColor="text-white"
+                from="from-white/80"
+                text="Expo"
+            >
+                <ExpoIcon width={14} height={14} />
+            </TechnologyCard>
+            <TechnologyCard
+                textColor="text-sky-500"
+                from="from-sky-500/80"
+                text="React Native"
+            />
+            <TechnologyCard
+                textColor="text-blue-500"
+                from="from-blue-500/80"
+                text="TypeScript"
+            />
+            <TechnologyCard
+                textColor="text-blue-500"
+                from="from-blue-500/80"
+                text="CSS"
+            />
+            <TechnologyCard
+                textColor="text-orange-500"
+                from="from-orange-500/80"
+                text="Firebase"
+            />
+        </ProjectCard>
+    </div>
+</section>

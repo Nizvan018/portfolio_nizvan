@@ -1,0 +1,18 @@
+---
+interface Props {
+    textColor: string;
+    from: string;
+    text: string;
+}
+
+const { textColor, from, text } = Astro.props;
+---
+
+<span class={`p-[2px] rounded-[8px] bg-gradient-to-r ${from} to-gray-800`}>
+    <div
+        class={`flex items-center gap-1 py-2 px-3 rounded-md text-xs font-bold ${textColor} bg-gray-950`}
+    >
+        <slot />
+        {text}
+    </div>
+</span>

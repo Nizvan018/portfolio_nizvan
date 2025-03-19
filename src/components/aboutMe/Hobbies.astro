@@ -1,0 +1,68 @@
+---
+import GamesIcon from "@components/icons/GamesIcon.astro";
+import PawIcon from "@components/icons/PawIcon.astro";
+import MovieIcon from "@components/icons/MovieIcon.astro";
+import MusicIcon from "@components/icons/MusicIcon.astro";
+---
+
+<section
+    class="flex justify-center w-[100vw] p-12 bg-gray-950 bg-gradient-to-br from-pink-500/10 via-sky-500/5 to-transparent"
+>
+    <div
+        class="grid grid-cols-2 md:grid-cols-4 justify-center items-center gap-8 w-full max-w-[1200px]"
+    >
+        <div class="flex flex-col items-center gap-2 w-full">
+            <GamesIcon
+                width={80}
+                height={80}
+                className="scale-75 md:scale-100 -rotate-[25deg]"
+            />
+            <p
+                class="w-[180px] text-sm md:text-base text-white/50 font-light text-center"
+            >
+                ¡Me encantan los videojuegos!, mi favorito es <span
+                    class="font-medium text-white">Red Dead Redemption 2</span
+                >
+            </p>
+        </div>
+        <div class="flex flex-col items-center gap-2 w-full">
+            <PawIcon width={80} height={80} className="scale-75 md:scale-100" />
+            <p
+                class="w-[180px] text-sm md:text-base text-white/50 font-light text-center"
+            >
+                Tengo dos mascotas, mi perro <span
+                    class="font-medium text-white">Chicuquito</span
+                > y mi gato <span class="font-medium text-white">Capella</span>
+            </p>
+        </div>
+        <div class="flex flex-col items-center gap-2 w-full">
+            <MovieIcon
+                width={80}
+                height={80}
+                className="scale-75 md:scale-100"
+            />
+            <p
+                class="w-[180px] text-sm md:text-base text-white/50 font-light text-center"
+            >
+                Mi película favorita es <span class="font-medium text-white"
+                    >Dune 2</span
+                > y mi libro favorito es <span class="font-medium text-white"
+                    >Dune</span
+                >
+            </p>
+        </div>
+        <div class="flex flex-col items-center gap-2 w-full">
+            <MusicIcon
+                width={80}
+                height={80}
+                className="scale-75 md:scale-100"
+            />
+            <p
+                class="w-[180px] text-sm md:text-base text-white/50 font-light text-center"
+            >
+                Me encanta escuchar música mientras programo, y sé tocar el
+                <span class="font-medium text-white">Piano</span>
+            </p>
+        </div>
+    </div>
+</section>

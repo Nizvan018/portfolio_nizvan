@@ -1,0 +1,148 @@
+---
+import MenuIcon from "./icons/MenuIcon.astro";
+import SideBar from "./SideBar.astro";
+---
+
+<nav
+    id="navbar"
+    class="fixed z-50 top-0 flex justify-center w-full h-16 px-8 border-b border-transparent duration-500"
+>
+    <div
+        class="flex items-center justify-between gap-12 w-full max-w-[1200px] h-full"
+    >
+        <a href="/" class="font-bold text-lg text-nowrap"> &lt;n /&gt; </a>
+        <!-- ENLACES PARA HOME PAGE -->
+        {
+            Astro.url.pathname == "/" && (
+                <div class="hidden -translate-y-16 lg:translate-y-0 md:flex justify-center gap-8 w-full text-sm duration-300 ease-in-out">
+                    <a
+                        class="opacity-50 duration-200 hover:opacity-100"
+                        href="#experience"
+                    >
+                        Experiencia
+                    </a>
+                    <a
+                        class="opacity-50 duration-200 hover:opacity-100"
+                        href="#projects"
+                    >
+                        Proyectos
+                    </a>
+                    <a
+                        class="opacity-50 duration-200 hover:opacity-100"
+                        href="/aboutMe"
+                    >
+                        Sobre mí
+                    </a>
+                </div>
+            )
+        }
+        <!-- ENLACES PARA ABOUT ME -->
+        {
+            Astro.url.pathname == "/aboutMe" && (
+                <div class="hidden -translate-y-16 lg:translate-y-0 md:flex justify-center gap-8 w-full text-sm duration-300 ease-in-out">
+                    <a
+                        class="opacity-50 duration-200 hover:opacity-100"
+                        href="/"
+                    >
+                        Inicio
+                    </a>
+                    <a
+                        class="opacity-50 duration-200 hover:opacity-100"
+                        href="#personality"
+                    >
+                        Personalidad
+                    </a>
+                    <a
+                        class="opacity-50 duration-200 hover:opacity-100"
+                        href="#studies"
+                    >
+                        Estudios
+                    </a>
+                </div>
+            )
+        }
+        <div class="relative flex items-center">
+            <a
+                href="#contactMe"
+                class="absolute right-0 -translate-x-10 lg:translate-x-0 py-3 px-4 rounded-full text-sm text-black font-semibold duration-200 bg-white hover:shadow-lg hover:bg-white/90"
+                >Contáctame</a
+            >
+            <button
+                id="menuButton"
+                class="opacity-100 lg:opacity-0 duration-500"
+                ><MenuIcon /></button
+            >
+        </div>
+    </div>
+</nav>
+
+<div
+    id="sideBar"
+    class="z-40 fixed right-0 -top-32 w-full duration-300 ease-in-out"
+>
+    <SideBar />
+</div>
+
+<script>
+    const navbar = document.getElementById("navbar");
+    const sideBar = document.getElementById("sideBar");
+    const menuButton = document.getElementById("menuButton");
+
+    menuButton?.addEventListener("click", function () {
+        sideBar?.classList.toggle("-top-32");
+        sideBar?.classList.toggle("top-16");
+    });
+
+    // Función para scroll:
+    window.addEventListener("scroll", function () {
+        if (!navbar) {
+            return;
+        }
+
+        if (window.innerWidth >= 1024) {
+            if (window.scrollY > 100) {
+                navbar.classList.add(
+                    "bg-gray-950/80",
+                    "backdrop-blur-md",
+                    "border-gray-100/20",
+                );
+                navbar.classList.remove("bg-transparent", "border-transparent");
+            } else {
+                navbar.classList.add("bg-transparent", "border-transparent");
+                navbar.classList.remove(
+                    "bg-gray-950/80",
+                    "backdrop-blur-md",
+                    "border-gray-100/20",
+                );
+            }
+        }
+    });
+
+    // Función para resize:
+    function detectWidthWindow() {
+        if (window.innerWidth < 1024) {
+            navbar?.classList.add(
+                "bg-gray-950/80",
+                "backdrop-blur-md",
+                "border-gray-100/20",
+            );
+            navbar?.classList.remove("bg-transparent", "border-transparent");
+        } else {
+            sideBar?.classList.add("-top-32");
+            sideBar?.classList.remove("top-16");
+
+            if (window.scrollY < 100) {
+                navbar?.classList.add("bg-transparent", "border-transparent");
+                navbar?.classList.remove(
+                    "bg-gray-950/80",
+                    "backdrop-blur-md",
+                    "border-gray-100/20",
+                );
+            }
+        }
+    }
+
+    detectWidthWindow();
+
+    window.addEventListener("resize", detectWidthWindow);
+</script>

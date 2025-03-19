@@ -1,4 +1,27 @@
 ---
+import "@fontsource/be-vietnam-pro/100.css";
+import "@fontsource/be-vietnam-pro/200.css";
+import "@fontsource/be-vietnam-pro/300.css";
+import "@fontsource/be-vietnam-pro/400.css";
+import "@fontsource/be-vietnam-pro/500.css";
+import "@fontsource/be-vietnam-pro/600.css";
+import "@fontsource/be-vietnam-pro/700.css";
+import "@fontsource/be-vietnam-pro/800.css";
+import "@fontsource/be-vietnam-pro/900.css";
+import "@fontsource/be-vietnam-pro/100-italic.css";
+import "@fontsource/be-vietnam-pro/200-italic.css";
+import "@fontsource/be-vietnam-pro/300-italic.css";
+import "@fontsource/be-vietnam-pro/400-italic.css";
+import "@fontsource/be-vietnam-pro/500-italic.css";
+import "@fontsource/be-vietnam-pro/600-italic.css";
+import "@fontsource/be-vietnam-pro/700-italic.css";
+import "@fontsource/be-vietnam-pro/800-italic.css";
+import "@fontsource/be-vietnam-pro/900-italic.css";
+
+import Navbar from "@components/Navbar.astro";
+import CustomToaster from "@components/react/CustomToaster";
+import Footer from "@components/Footer.astro";
+
 interface Props {
 	title: string;
 }
@@ -17,35 +40,42 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<slot />
+		<CustomToaster client:load />
+		<div
+			class="fixed top-0 z-[-2] h-screen w-screen bg-[#000000] bg-[radial-gradient(#ffffff1e_1px,#030712_1px)] bg-[size:20px_20px]"
+		>
+		</div>
+		<div
+			class="absolute top-0 z-[-2] h-screen w-screen bg-transparent bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(88,28,135,0.3),rgba(255,255,255,0))]"
+		>
+		</div>
+
+		<Navbar />
+		<main class="flex justify-center px-8 w-full">
+			<slot />
+		</main>
+		<Footer />
 	</body>
 </html>
 <style is:global>
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+		color-scheme: light dark;
 	}
+
 	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
+		font-family: "Be Vietnam Pro", sans-serif;
+		scroll-behavior: smooth;
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+
+	body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		@apply bg-gray-950;
+		overflow-x: hidden;
+	}
+
+	.scroll-target {
+		scroll-margin-top: 80px;
 	}
 </style>

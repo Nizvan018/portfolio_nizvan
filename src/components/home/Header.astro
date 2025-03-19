@@ -1,0 +1,72 @@
+---
+import GitHubIcon from "@components/icons/GitHubIcon.astro";
+import EmailIcon from "@components/icons/EmailIcon.astro";
+import InstagramIcon from "@components/icons/InstagramIcon.astro";
+import ChevronsDownIcon from "@components/icons/ChevronsDownIcon.astro";
+import OutlineRoundButton from "@components/OutlineRoundButton.astro";
+---
+
+<header class="flex flex-col w-full">
+    <!-- HEADER -->
+    <div
+        class="flex flex-col justify-center items-center gap-12 sm:gap-16 h-full"
+    >
+        <!-- TITLE -->
+        <div class="flex flex-col items-center sm:gap-4">
+            <span class="text-sm sm:text-lg text-white/80 duration-200"
+                >Desarrollador Web</span
+            >
+            <h1
+                class="text-[84px] sm:text-9xl lg:text-[160px] font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-violet-500 to-sky-500 duration-200 opacity-85"
+            >
+                Fullstack
+            </h1>
+        </div>
+
+        <!-- MY INFO -->
+        <div class="flex flex-col items-center gap-2">
+            <h2 class="text-lg sm:text-xl font-semibold duration-200">
+                Nizvan Monteón Ricárdez
+            </h2>
+            <span
+                class="text-sm sm:text-base text-center font-extralight text-white/80"
+                >Desarrollando con amor las páginas web son más bonitas y
+                funcionales</span
+            >
+
+            <!-- BUTTONS -->
+            <div class="flex gap-4 mt-12 sm:mt-6">
+                <OutlineRoundButton
+                    href="https://github.com/Nizvan018"
+                    label="GitHub"
+                >
+                    <GitHubIcon width={20} height={20} />
+                </OutlineRoundButton>
+                <OutlineRoundButton label="E-mail">
+                    <EmailIcon width={20} height={20} />
+                </OutlineRoundButton>
+                <OutlineRoundButton
+                    label="Instagram"
+                    href="https://www.instagram.com/nizvan_dev/"
+                >
+                    <InstagramIcon width={20} height={20} />
+                </OutlineRoundButton>
+            </div>
+        </div>
+    </div>
+
+    <!-- DIVIDER -->
+    <a
+        href="#experience"
+        class="flex flex-col items-center gap-2 h-24 cursor-pointer"
+    >
+        <span class="text-sm sm:text-base">Conocer más</span>
+        <ChevronsDownIcon className="animate-bounce" />
+    </a>
+</header>
+
+<style>
+    header {
+        height: calc(100vh - 64px);
+    }
+</style>

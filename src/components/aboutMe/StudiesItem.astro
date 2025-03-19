@@ -1,0 +1,44 @@
+---
+interface Props {
+    date: string;
+    title: string;
+    description: string;
+    specialSpan?: string;
+    span?: string;
+}
+
+const { date, title, description, specialSpan, span } = Astro.props;
+---
+
+<li class="flex flex-col gap-1 mb-10 ml-4">
+    <div class="absolute w-3 h-3 rounded-full mt-1.5 -left-1.5 bg-gray-700">
+    </div>
+    <time
+        class="text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+        >{date}</time
+    >
+    <div class="flex items-center gap-3">
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+            {title}
+        </h3>
+        {
+            specialSpan != undefined && (
+                <span class="text-gray-950 text-sm font-semibold py-1 px-2 rounded-md bg-gradient-to-r from-pink-500/85 via-violet-500/85 to-sky-500/85">
+                    {specialSpan}
+                </span>
+            )
+        }
+        {
+            span != undefined && (
+                <span class="text-gray-400 text-sm font-semibold py-1 px-2 rounded-md bg-gray-700">
+                    {span}
+                </span>
+            )
+        }
+    </div>
+    <p
+        class="mb-4 text-sm md:text-base font-normal text-gray-500 dark:text-gray-400"
+    >
+        {description}
+    </p>
+</li>
