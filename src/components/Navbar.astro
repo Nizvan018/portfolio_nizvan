@@ -13,7 +13,6 @@ const pathname = Astro.url.pathname;
         class="flex items-center justify-between gap-12 w-full max-w-[1200px] h-full"
     >
         <a href="/" class="font-bold text-lg text-nowrap"> &lt;n /&gt; </a>
-        <div class="hidden">Current path: {pathname}</div>
         <!-- ENLACES PARA HOME PAGE -->
         {
             pathname === "/" && (
@@ -41,7 +40,7 @@ const pathname = Astro.url.pathname;
         }
         <!-- ENLACES PARA ABOUT ME -->
         {
-            pathname == "/aboutMe" && (
+            pathname.startsWith("/aboutMe") && (
                 <div class="hidden -translate-y-16 lg:translate-y-0 md:flex justify-center gap-10 w-full text-sm duration-300 ease-in-out">
                     <a
                         class="opacity-50 duration-200 hover:opacity-100"

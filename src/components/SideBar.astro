@@ -35,7 +35,7 @@ const pathname = Astro.url.pathname;
     }
     <!-- ENLACES PARA ABOUT ME -->
     {
-        pathname == "/aboutMe" && (
+        pathname.startsWith("/aboutMe") && (
             <div class="flex flex-col gap-4 w-full text-sm">
                 <a class="opacity-50 duration-200 hover:opacity-100" href="/">
                     Inicio
