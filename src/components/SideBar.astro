@@ -1,6 +1,7 @@
 ---
 import GitHubIcon from "./icons/GitHubIcon.astro";
 import InstagramIcon from "./icons/InstagramIcon.astro";
+import EmailIcon from "./icons/EmailIcon.astro";
 
 const pathname = Astro.url.pathname;
 ---
@@ -71,6 +72,13 @@ const pathname = Astro.url.pathname;
             class="opacity-50 duration-200 hover:opacity-100"
         >
             <InstagramIcon width={20} height={20} />
+        </a>
+        <a
+            href="mailto:nizvan.dev@gmail.com?subject=Consulta%20sobre%20desarrollo%20web"
+            class="flex items-center gap-2 opacity-50 duration-200 hover:opacity-100"
+        >
+            <EmailIcon width={20} height={20} />
+            <span class="text-xs font-light">nizvan.dev@gmail.com</span>
         </a>
     </div>
 </div>
