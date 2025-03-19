@@ -1,0 +1,123 @@
+---
+import TechnologyCard from "@components/TechnologyCard.astro";
+import AstroIcon from "@components/icons/AstroIcon.astro";
+import NextjsIcon from "@components/icons/NextjsIcon.astro";
+import WorksCard from "@components/home/WorksCard.astro";
+
+import jaguarJourney from "public/images/jaguarjourney_image.webp";
+import degante from "public/images/degante_image.webp";
+import chicago from "public/images/chicago_image.webp";
+import WordpressIcon from "@components/icons/WordpressIcon.astro";
+---
+
+<section
+    id="experience"
+    class="flex flex-col items-center gap-16 scroll-target"
+>
+    <div class="flex flex-col items-center gap-6">
+        <h2
+            class="w-fit h-[50px] text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-violet-500 to-sky-500 duration-200 opacity-85"
+        >
+            Experiencia
+        </h2>
+        <p
+            class="text-center text-base md:text-lg font-extralight text-white/80"
+        >
+            Estos son los proyectos reales en los que he trabajado, ya sea
+            desarrollándolos desde cero o contribuyendo en su crecimiento
+        </p>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-8 max-w-[1000px]">
+        <WorksCard
+            image={jaguarJourney}
+            alt="Jaguar Journey mockup"
+            title="Desarrollo de landing page"
+            company="Jaguar Journey"
+            description="Mi proyecto más reciente, actualmente en proceso de despliegue para renovar el sitio anterior. Se trata de la landing de para Jaguar Journey, una agencia de experiencias turísticas en la Riviera Maya. El sitio muestra las experiencias disponibles y permite a los clientes solicitar información y reservar tours privados."
+            from="from-amber-500/50"
+            rgba="#9f0712"
+            href="https://www.jaguarjourneymx.com/"
+        >
+            <TechnologyCard
+                textColor="text-pink-500"
+                from="from-pink-500/80"
+                text="Astro"
+            >
+                <AstroIcon width={14} height={14} />
+            </TechnologyCard>
+            <TechnologyCard
+                textColor="text-sky-500"
+                from="from-sky-500/80"
+                text="React"
+            />
+            <TechnologyCard
+                textColor="text-blue-500"
+                from="from-blue-500/80"
+                text="TypeScript"
+            />
+            <TechnologyCard
+                textColor="text-cyan-500"
+                from="from-cyan-500/80"
+                text="Tailwind"
+            />
+        </WorksCard>
+
+        <WorksCard
+            image={degante}
+            alt="De Gante mockup"
+            title="Desarrollo de sistema de gestión de empleados"
+            company="De Gante Corporativo & Asociados C.A. de C.V."
+            description="Se trata de un sistema web Full Stack para la gestión de empleados, nóminas, gastos, usuarios y reportes de la constructora De Gante. Actualmente, sigo mejorándolo y agregando nuevas funcionalidades para optimizar su operación."
+            from="from-indigo-500/50"
+            rgba="rgba(245, 243, 255, 0.3)"
+        >
+            <TechnologyCard
+                textColor="text-white"
+                from="from-white/80"
+                text="Next.js"
+            >
+                <NextjsIcon width={16} height={16} />
+            </TechnologyCard>
+            <TechnologyCard
+                textColor="text-sky-500"
+                from="from-sky-500/80"
+                text="React"
+            />
+            <TechnologyCard
+                textColor="text-blue-500"
+                from="from-blue-500/80"
+                text="TypeScript"
+            />
+            <TechnologyCard
+                textColor="text-white"
+                from="from-white"
+                text="Prisma"
+            />
+            <TechnologyCard
+                textColor="text-cyan-500"
+                from="from-cyan-500/80"
+                text="Tailwind"
+            />
+        </WorksCard>
+
+        <WorksCard
+            image={chicago}
+            alt="Chicago Dental mockup"
+            title="Desarrollo de una página dentro del sitio"
+            company="Chicago Dental"
+            description="Formé parte del desarrollo del sitio web de Chicago Dental, un depósito dental en México. Implementé una página informativa sobre herramientas de magnificación, incluyendo un formulario de contacto para el contacto con los clientes."
+            from="from-teal-500/50"
+            rgba="rgba(255, 255, 255, 0.3)"
+            href="https://chicagodental.mx/landing-magnificacion/"
+        >
+            <TechnologyCard
+                textColor="text-blue-500"
+                from="from-blue-500/80"
+                text="WordPress"
+            >
+                <WordpressIcon width={16} height={16} />
+            </TechnologyCard>
+        </WorksCard>
+    </div>
+</section>
