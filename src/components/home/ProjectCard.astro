@@ -1,5 +1,6 @@
 ---
 import Image from "astro/components/Image.astro";
+import OpenLockIcon from "@components/icons/OpenLockIcon.astro";
 
 interface Props {
     image: ImageMetadata;
@@ -8,31 +9,71 @@ interface Props {
     description: string;
     from: string;
     rgba: string;
+    href?: string;
 }
 
-const { image, alt, title, description, from, rgba } = Astro.props;
+const { image, alt, title, description, from, rgba, href } = Astro.props;
 ---
 
-<article
-    class={`overflow-hidden w-full md:w-[calc(50%-16px)] max-w-[500px] p-[2px] rounded-[10px] bg-gradient-to-b ${from} from-30% to-gray-900`}
->
-    <div
-        class="flex flex-col w-full h-full rounded-lg"
-        style={`background-image: radial-gradient(100% 100% at top, ${rgba}, rgb(3 7 18));`}
-    >
-        <picture class="w-full h-64 bg-gray-800 rounded-t-lg">
-            <Image
-                src={image}
-                alt={alt}
-                class="rounded-t-lg h-64 object-cover"
-            />
-        </picture>
-        <div class="flex flex-col gap-1 p-4">
-            <h3 class="font-bold">{title}</h3>
-            <p class="font-light text-sm text-white/80">{description}</p>
-            <div class="flex flex-wrap gap-2 mt-6">
-                <slot />
+{
+    href ? (
+        <a
+            href={href}
+            target={"_blank"}
+            rel="noopener noreferrer"
+            class={`overflow-hidden w-full md:w-[calc(50%-16px)] max-w-[500px] p-[2px] rounded-[10px] bg-gradient-to-b ${from} from-30% to-gray-900 transition hover:scale-105`}
+        >
+            <article
+                class="flex flex-col w-full h-full rounded-lg"
+                style={`background-image: radial-gradient(100% 100% at top, ${rgba}, rgb(3 7 18));`}
+            >
+                <picture class="relative w-full h-64 bg-gray-800 rounded-t-lg">
+                    <Image
+                        src={image}
+                        alt={alt}
+                        class="rounded-t-lg h-64 object-cover"
+                    />
+                    <span class="absolute bottom-2 right-2 flex items-center gap-1 w-fit py-2 px-3 rounded-md text-gray-950 text-xs font-bold bg-white opacity-80 backdrop-blur-sm">
+                        <OpenLockIcon width={16} height={16} />
+                        <span>Código abierto</span>
+                    </span>
+                </picture>
+                <div class="flex flex-col gap-1 p-4">
+                    <h3 class="font-bold">{title}</h3>
+                    <p class="font-light text-sm text-white/80">
+                        {description}
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-6">
+                        <slot />
+                    </div>
+                </div>
+            </article>
+        </a>
+    ) : (
+        <article
+            class={`overflow-hidden w-full md:w-[calc(50%-16px)] max-w-[500px] p-[2px] rounded-[10px] bg-gradient-to-b ${from} from-30% to-gray-900`}
+        >
+            <div
+                class="flex flex-col w-full h-full rounded-lg"
+                style={`background-image: radial-gradient(100% 100% at top, ${rgba}, rgb(3 7 18));`}
+            >
+                <picture class="w-full h-64 bg-gray-800 rounded-t-lg">
+                    <Image
+                        src={image}
+                        alt={alt}
+                        class="rounded-t-lg h-64 object-cover"
+                    />
+                </picture>
+                <div class="flex flex-col gap-1 p-4">
+                    <h3 class="font-bold">{title}</h3>
+                    <p class="font-light text-sm text-white/80">
+                        {description}
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-6">
+                        <slot />
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</article>
+        </article>
+    )
+}
