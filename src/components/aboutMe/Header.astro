@@ -1,6 +1,6 @@
 ---
 import Image from "astro/components/Image.astro";
-import profile from "public/images/profile_picture.jpg";
+import profile from "public/images/profile_picture.webp";
 import InstagramIcon from "@components/icons/InstagramIcon.astro";
 import GitHubIcon from "@components/icons/GitHubIcon.astro";
 import ChevronsDownIcon from "@components/icons/ChevronsDownIcon.astro";
@@ -11,7 +11,9 @@ import ChevronsDownIcon from "@components/icons/ChevronsDownIcon.astro";
         class="flex flex-col md:flex-row items-center justify-center gap-8 lg:gap-12 w-full h-screen"
     >
         <!-- IMAGE -->
-        <picture class="aspect-[3/4] w-72 md:w-4/12 rounded-lg bg-slate-500">
+        <picture
+            class="aspect-[3/4] w-72 md:w-4/12 rounded-lg bg-slate-500 shadow-lg shadow-rose-500/20"
+        >
             <Image
                 src={profile}
                 alt="Mi foto de perfil"
