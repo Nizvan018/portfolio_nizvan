@@ -4,6 +4,7 @@ import EmailIcon from "@components/icons/EmailIcon.astro";
 import InstagramIcon from "@components/icons/InstagramIcon.astro";
 import ChevronsDownIcon from "@components/icons/ChevronsDownIcon.astro";
 import OutlineRoundButton from "@components/OutlineRoundButton.astro";
+import TypewriterEffect from "@components/react/home/TypewriterEffect";
 ---
 
 <header class="flex flex-col w-full">
@@ -19,20 +20,16 @@ import OutlineRoundButton from "@components/OutlineRoundButton.astro";
             <h1
                 class="text-[84px] sm:text-9xl lg:text-[160px] font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-violet-500 to-sky-500 duration-200 opacity-85"
             >
-                Fullstack
+                FullStack
             </h1>
         </div>
 
         <!-- MY INFO -->
         <div class="flex flex-col items-center gap-2">
-            <h2 class="text-lg sm:text-xl font-semibold duration-200">
+            <h2 class="text-xl sm:text-2xl font-semibold duration-200">
                 Nizvan Monteón Ricárdez
             </h2>
-            <span
-                class="text-sm sm:text-base text-center font-extralight text-white/80"
-                >Desarrollando con amor las páginas web son más bonitas y
-                funcionales</span
-            >
+            <TypewriterEffect client:load />
 
             <!-- BUTTONS -->
             <div class="flex gap-4 mt-12 sm:mt-6">

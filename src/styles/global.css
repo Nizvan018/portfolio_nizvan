@@ -20,3 +20,13 @@ body {
 .scroll-target {
     scroll-margin-top: 80px;
 }
+
+@theme {
+    --animate-cursor: cursor-blink 1s infinite;
+
+    @keyframes cursor-blink {
+        50% {
+            opacity: 0;
+        }
+    }
+}
