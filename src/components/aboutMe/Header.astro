@@ -4,6 +4,7 @@ import profile from "public/images/profile_picture.webp";
 import InstagramIcon from "@components/icons/InstagramIcon.astro";
 import GitHubIcon from "@components/icons/GitHubIcon.astro";
 import ChevronsDownIcon from "@components/icons/ChevronsDownIcon.astro";
+import EmailIcon from "@components/icons/EmailIcon.astro";
 ---
 
 <header class="flex flex-col items-center justify-center gap-8 w-full">
@@ -39,11 +40,17 @@ import ChevronsDownIcon from "@components/icons/ChevronsDownIcon.astro";
             <p
                 class="text-sm sm:text-base font-extralight text-white/85 max-w-[640px]"
             >
-                Soy un chico de 23 años, vivo en Oaxaca, Méixco, y soy Ingeniero
-                en Sistemas Computacionales. Amo programar, me encanta resolver
-                problemas y soy un apasionado por el diseño. Siempre practico
-                hasta mejorar en todo lo que me proponga, gracias a mi
-                entusiasmo por aprender cosas nuevas.
+                Soy Ingeniero en Sistemas Computacionales, tengo 23 años y vivo
+                en Oaxaca, México. Amo la programación y la resolución de
+                problemas, y me apasiona el diseño web y móvil. Disfruto cada
+                etapa del desarrollo, desde la idea inicial hasta el producto
+                final, siempre buscando crear experiencias funcionales y
+                divertidas.
+                <br />
+                <br />
+                Gracias a mi curiosidad y entusiasmo por aprender, me esfuerzo constantemente
+                por mejorar mis habilidades, explorar nuevas tecnologías y enfrentar
+                desafíos que me ayuden a crecer como desarrollador.
             </p>
 
             <div class="flex gap-4 items-center mt-4">
@@ -63,13 +70,25 @@ import ChevronsDownIcon from "@components/icons/ChevronsDownIcon.astro";
                 >
                     <InstagramIcon width={24} height={24} />
                 </a>
+                <a
+                    href="mailto:nizvan.dev@gmail.com?subject=Consulta%20sobre%20desarrollo%20web"
+                >
+                    <EmailIcon
+                        width={24}
+                        height={24}
+                        className="opacity-50 duration-300 hover:opacity-100"
+                    />
+                </a>
                 <span class="text-sm opacity-50 duration-200 hover:opacity-100"
                     >nizvan.dev@gmail.com</span
                 >
             </div>
         </article>
     </div>
-    <a href="" class="flex flex-col items-center gap-2 h-24 cursor-pointer">
+    <a
+        href="#hobbies"
+        class="flex flex-col items-center gap-2 h-24 cursor-pointer"
+    >
         <span class="text-sm sm:text-base">Conóceme un poquito más</span>
         <ChevronsDownIcon className="animate-bounce" />
     </a>
