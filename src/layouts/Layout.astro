@@ -23,6 +23,7 @@ import "sonner/dist/styles.css";
 import Navbar from "@components/Navbar.astro";
 import CustomToaster from "@components/react/CustomToaster";
 import Footer from "@components/Footer.astro";
+import OpenGraph from "@/components/OpenGraph.astro";
 import { ClientRouter } from "astro:transitions";
 
 interface Props {
@@ -43,19 +44,9 @@ const { title } = Astro.props;
 			content="Portafolio de desarrollo web Full Stack de Nizvan. Descubre mis proyectos, habilidades y experiencia en aplicaciones web."
 		/>
 		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<link rel="sitemap" href="/sitemap-index.xml" />
 
-		<meta property="og:url" content="https://nizvan-dev.vercel.app" />
-		<meta property="og:type" content="website" />
-		<meta property="og:title" content="<nizvan />" />
-		<meta
-			property="og:description"
-			content="Portafolio de desarrollo web Full Stack de Nizvan. Descubre mis proyectos, habilidades y experiencia en aplicaciones web."
-		/>
-		<meta
-			property="og:image"
-			content="https://nizvan-dev.vercel.app/og.jpg"
-		/>
-		<meta property="og:locale" content="es_MX" />
+		<OpenGraph />
 
 		<meta name="generator" content={Astro.generator} />
 		<ClientRouter />
