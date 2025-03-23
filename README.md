@@ -1,3 +1,28 @@
+# My Astro Web Porfolio 🚀
+
+![Desktop Screenshot](https://github.com/user-attachments/assets/26e0ce16-7b66-4a38-aaf8-875ee10acfc0)
+
+<div align="center">
+  
+  [![Contributors][contributors-shield]][contributors-url]
+  [![Forks][forks-shield]][forks-url]
+  [![Stargazers][stars-shield]][stars-url]
+  [![Issues][issues-shield]][issues-url]
+  
+</div>
+
+
+[contributors-shield]: https://img.shields.io/github/contributors/Nizvan018/portfolio_nizvan.svg?style=for-the-badge
+[contributors-url]: https://github.com/Nizvan018/portfolio_nizvan/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Nizvan018/portfolio_nizvan.svg?style=for-the-badge
+[forks-url]: https://github.com/Nizvan018/portfolio_nizvan/network/members
+[stars-shield]: https://img.shields.io/github/stars/Nizvan018/portfolio_nizvan.svg?style=for-the-badge
+[stars-url]: https://github.com/Nizvan018/portfolio_nizvan/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Nizvan018/portfolio_nizvan.svg?style=for-the-badge
+[issues-url]: https://github.com/Nizvan018/portfolio_nizvan/issues
+
+![Mobile Screenshot](https://github.com/user-attachments/assets/eecfd793-4208-4657-932a-f6a2b266d46a)
+
 # Astro Starter Kit: Basics
 
 ```sh
