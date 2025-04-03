@@ -98,6 +98,11 @@ The most important dependencies are listed here:
 * [react-hook-form 7.53.0](https://react-hook-form.com/)
 * [sonner 2.0.1](https://sonner.emilkowal.ski/)
 
+## 📜 License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+Learn how to contribute in the section below.
+
 ## 🤝 How to contribute
 
 This project is open source, so feel free to clone it, edite it and use for your own porfolio. **I would be very grateful if you include some thanks or recognition to the author (me :D)**.
