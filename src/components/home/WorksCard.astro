@@ -1,5 +1,5 @@
 ---
-import Image from "astro/components/Image.astro";
+import { Image } from "astro:assets";
 import WebIcon from "@components/icons/WebIcon.astro";
 
 interface Props {
@@ -30,6 +30,7 @@ const { image, alt, title, company, description, from, rgba, href } =
             <Image
                 src={image}
                 alt={alt}
+                loading="lazy"
                 class="rounded-t-lg w-full h-full object-cover group-hover:scale-105 duration-500"
             />
         </picture>

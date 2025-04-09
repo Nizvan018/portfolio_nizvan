@@ -1,6 +1,7 @@
 ---
-import Image from "astro/components/Image.astro";
-import profile from "public/images/profile_picture.webp";
+import { Image } from "astro:assets";
+
+import profile from "@assets/images/profile_picture.webp";
 ---
 
 <section
@@ -47,6 +48,7 @@ import profile from "public/images/profile_picture.webp";
         <Image
             src={profile}
             alt="Mi foto de perfil"
+            loading="lazy"
             class="w-full h-full rounded-lg object-cover group-hover:scale-105 duration-500"
         />
     </picture>
