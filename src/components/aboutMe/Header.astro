@@ -1,10 +1,11 @@
 ---
-import Image from "astro/components/Image.astro";
-import profile from "public/images/profile_picture.webp";
+import { Image } from "astro:assets";
 import InstagramIcon from "@components/icons/InstagramIcon.astro";
 import GitHubIcon from "@components/icons/GitHubIcon.astro";
 import ChevronsDownIcon from "@components/icons/ChevronsDownIcon.astro";
 import EmailIcon from "@components/icons/EmailIcon.astro";
+
+import profile from "@assets/images/profile_picture.webp";
 ---
 
 <header class="flex flex-col items-center justify-center gap-8 w-full">
@@ -18,6 +19,7 @@ import EmailIcon from "@components/icons/EmailIcon.astro";
             <Image
                 src={profile}
                 alt="Mi foto de perfil"
+                loading="eager"
                 class="w-full h-full aspect-[3/4] rounded-lg object-cover group-hover:scale-105 duration-500"
             />
         </picture>
