@@ -13,12 +13,12 @@ import EmailIcon from "@components/icons/EmailIcon.astro";
     >
         <!-- IMAGE -->
         <picture
-            class="aspect-[3/4] w-72 md:w-4/12 rounded-lg bg-slate-500 shadow-lg shadow-rose-500/20"
+            class="group overflow-hidden aspect-[3/4] w-72 md:w-4/12 rounded-lg border-b border-rose-500/50 hover:border-rose-500 shadow-lg hover:shadow-xl shadow-rose-500/20 duration-500"
         >
             <Image
                 src={profile}
                 alt="Mi foto de perfil"
-                class="w-full h-full aspect-[3/4] rounded-lg object-cover"
+                class="w-full h-full aspect-[3/4] rounded-lg object-cover group-hover:scale-105 duration-500"
             />
         </picture>
 

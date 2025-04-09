@@ -34,7 +34,7 @@ import profile from "public/images/profile_picture.webp";
             <span>¿Quieres saber más sobre mi?</span>
             <a
                 href="/aboutMe"
-                class="font-semibold py-3 px-6 rounded-lg bg-gradient-to-r from-pink-500/85 via-violet-500/85 to-sky-500/85 duration-200 hover:scale-110"
+                class="font-semibold py-3 px-6 rounded-lg bg-gradient-to-r from-pink-500/85 via-violet-500/85 to-sky-500/85 duration-200 hover:opacity-80"
                 >¡Claro que sí!</a
             >
         </div>
@@ -42,12 +42,12 @@ import profile from "public/images/profile_picture.webp";
 
     <!-- IMAGE -->
     <picture
-        class="w-[240px] md:w-5/12 max-w-96 h-[360px] md:h-[420px] lg:h-[480px] rounded-lg bg-slate-500 shadow-lg shadow-sky-500/20"
+        class="group overflow-hidden w-[240px] md:w-5/12 max-w-96 h-[360px] md:h-[420px] lg:h-[480px] rounded-lg border-b border-sky-500/50 hover:border-sky-500 shadow-lg hover:shadow-xl shadow-sky-500/20 duration-500"
     >
         <Image
             src={profile}
             alt="Mi foto de perfil"
-            class="w-full h-full rounded-lg object-cover"
+            class="w-full h-full rounded-lg object-cover group-hover:scale-105 duration-500"
         />
     </picture>
 </section>

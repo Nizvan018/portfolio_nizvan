@@ -29,4 +29,6 @@ body {
             opacity: 0;
         }
     }
+
+    --aspect-landscape: 3 / 2;
 }
