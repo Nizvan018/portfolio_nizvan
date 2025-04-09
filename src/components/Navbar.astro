@@ -12,7 +12,13 @@ const pathname = Astro.url.pathname;
     <div
         class="flex items-center justify-between gap-12 w-full max-w-[1200px] h-full"
     >
-        <a href="/" class="font-bold text-lg text-nowrap"> &lt;n /&gt; </a>
+        <a
+            href="/"
+            aria-label="Home page"
+            class="font-bold text-lg text-nowrap"
+        >
+            &lt;n /&gt;
+        </a>
         <!-- ENLACES PARA HOME PAGE -->
         {
             pathname === "/" && (
@@ -72,7 +78,7 @@ const pathname = Astro.url.pathname;
             <button
                 id="menuButton"
                 class="opacity-100 lg:opacity-0 duration-500"
-                ><MenuIcon /></button
+                aria-label="Menu button"><MenuIcon /></button
             >
         </div>
     </div>

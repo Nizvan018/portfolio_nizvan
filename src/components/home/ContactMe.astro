@@ -36,6 +36,7 @@ import ContactForm from "@components/react/ContactForm";
                         <LinkWithIcon
                             href="https://www.instagram.com/nizvan_dev/"
                             label="nizvan_dev"
+                            ariaLabel="Mi Instagram"
                         >
                             <InstagramIcon width={20} height={20} />
                         </LinkWithIcon>
@@ -43,6 +44,7 @@ import ContactForm from "@components/react/ContactForm";
                         <LinkWithIcon
                             href="https://github.com/Nizvan018"
                             label="Nizvan018"
+                            ariaLabel="Mi GitHub"
                         >
                             <GitHubIcon width={20} height={20} />
                         </LinkWithIcon>
@@ -87,20 +89,28 @@ import ContactForm from "@components/react/ContactForm";
             <LinkWithIcon
                 href="https://www.instagram.com/nizvan_dev/"
                 label="nizvan_dev"
+                ariaLabel="Mi Instagram"
             >
                 <InstagramIcon width={20} height={20} />
             </LinkWithIcon>
 
-            <LinkWithIcon href="https://github.com/Nizvan018" label="Nizvan018">
+            <LinkWithIcon
+                href="https://github.com/Nizvan018"
+                label="Nizvan018"
+                ariaLabel="Mi GitHub"
+            >
                 <GitHubIcon width={20} height={20} />
             </LinkWithIcon>
-            <span class="group flex items-center gap-1">
+            <LinkWithIcon
+                href="mailto:nizvan.dev@gmail.com?subject=Consulta%20sobre%20desarrollo%20web"
+                label="Enviar correo"
+            >
                 <EmailIcon width={20} height={20} />
-                <span
-                    class="text-white/80 font-light duration-200 group-hover:text-white"
-                    >nizvan.dev@gmail.com</span
-                >
-            </span>
+            </LinkWithIcon>
+            <span
+                class="text-white/80 text-xs font-medium duration-200 group-hover:text-white"
+                >nizvan.dev@gmail.com</span
+            >
         </div>
     </div>
 </section>

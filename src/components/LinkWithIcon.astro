@@ -2,16 +2,18 @@
 interface Props {
     href: string;
     label: string;
+    ariaLabel?: string;
     className?: string;
 }
 
-const { href, label, className = "" } = Astro.props;
+const { href, label, ariaLabel, className = "" } = Astro.props;
 ---
 
 <a
     href={href}
     target="_blank"
-    rel="noopener noreferer"
+    rel="noopener noreferrer"
+    aria-label={ariaLabel}
     class={`group flex items-center gap-1 ${className}`}
 >
     <slot />
